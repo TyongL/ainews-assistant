@@ -14,3 +14,5 @@ Requirements:
 - sound publishable, not like a note summary
 - surface tension, implication, and practical takeaway
 - provide a title and short hook when useful
+- preserve the emotional or cognitive tension from the original note
+- write like a real delivery draft, not an internal memo

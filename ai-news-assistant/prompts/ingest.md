@@ -14,6 +14,7 @@ Your tasks:
    - tags
 3. Return a concise confirmation for the user.
 4. Prepare normalized records for the news table and daily report.
+5. Preserve every original source link that appears inside the source material.
 
 Rules:
 
@@ -21,3 +22,4 @@ Rules:
 - Preserve original links.
 - Prefer direct, descriptive titles over vague summaries.
 - If multiple items are ambiguous, surface the ambiguity explicitly.
+- After ingest, hand the user a concise ordered list so they can choose which item to read first.

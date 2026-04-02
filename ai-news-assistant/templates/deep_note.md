@@ -23,3 +23,7 @@
 ## 可转创作观点
 
 {{content_angles}}
+
+## 全链路思考起点与原创原声
+
+{{original_user_thought_chain}}

@@ -4,6 +4,14 @@
   "state_backend": "Feishu Bitable",
   "content_backend": "Feishu Docs",
   "local_backup_enabled": true,
+  "behavior_rules": {
+    "source_is_ground_truth": true,
+    "preserve_original_links": true,
+    "require_plain_language_explanations": true,
+    "challenge_user_when_reasoning_is_flawed": true,
+    "preserve_original_thought_chain_in_notes": true,
+    "prefer_publishable_script_output": true
+  },
   "workflow_statuses": [
     "ingested",
     "queued",

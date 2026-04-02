@@ -1,6 +1,13 @@
 import argparse
 import json
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from ai_news_assistant.ingest import parse_news_input  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -36,12 +43,15 @@ def main() -> int:
         raw_text = Path(args.input_file).read_text(encoding="utf-8")
         source = args.input_file
 
+    parsed = parse_news_input(raw_text)
     payload = {
         "source": source,
         "raw_length": len(raw_text),
+        "item_count": parsed["item_count"],
+        "items": parsed["items"],
+        "reading_list": parsed["reading_list"],
         "todo": [
-            "split raw input into item-level news units",
-            "extract title, summary, links, tags, and dates",
+            "enrich items with tags, dates, and source classification",
             "write results to Feishu Bitable and daily report doc",
         ],
     }
