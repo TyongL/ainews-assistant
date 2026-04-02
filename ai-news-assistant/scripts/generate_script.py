@@ -17,6 +17,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--note-id", help="Structured note identifier.")
     parser.add_argument("--note-json", help="Inline JSON payload for a structured note.")
+    parser.add_argument("--prompt-file", help="Optional prompt file produced by generate_xiaohui_script.py.")
     parser.add_argument(
         "--script-type",
         default="short-video",
@@ -40,14 +41,19 @@ def main() -> int:
         "content_angles": [],
         "original_user_thought_chain": [],
     }
+    prompt_preview = ""
+    if args.prompt_file:
+        prompt_preview = Path(args.prompt_file).read_text(encoding="utf-8", errors="ignore")[:2000]
     script_payload = build_script_payload(note, args.script_type)
     payload = {
         "note_id": args.note_id,
         "script_type": args.script_type,
         "template": "templates/script.md",
+        "prompt_preview": prompt_preview,
         "script": script_payload,
         "markdown": render_script_markdown(script_payload),
         "todo": [
+            "run generate_xiaohui_script.py first when knowledge-base-backed prompt assembly is needed",
             "merge note content with XHIP-style persona and structure",
             "write final result to a Feishu doc and update workflow state",
         ],

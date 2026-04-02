@@ -34,6 +34,22 @@ Content storage:
 Reusable capability layer:
 - prompts, templates, scripts, and migrated logic from `ainews`, `ainews-companion`, `ainews-archive`, and `XHIP-agent`
 
+## Core Skill Docs
+
+The repository keeps one formal set of skill documents for the project:
+
+- `docs/skills/ainews.SKILL.md`
+- `docs/skills/ainews-companion.SKILL.md`
+- `docs/skills/ainews-archive.SKILL.md`
+- `docs/skills/XHIP-agent.SKILL.md`
+
+XHIP original resources:
+
+- `docs/xhip/tone_and_persona.md`
+- `docs/xhip/logic_and_style.md`
+- `docs/xhip/接口配置.md`
+- `docs/xhip/接口文档.md`
+
 ## Install
 
 ### OpenClaw
@@ -72,7 +88,7 @@ ai-news-assistant/
 
 ## What Has Been Migrated
 
-The repository now carries the productized logic of the old skill system in a mixed-migration form:
+The repository now carries the integrated logic of the original skill system in one project-oriented form:
 
 - `ainews`
   - kept: source-first ingest, source link preservation, "what should we read first" handoff
@@ -85,6 +101,11 @@ The repository now carries the productized logic of the old skill system in a mi
 - `XHIP-agent`
   - kept: script generation as a real content transformation task rather than summary rewriting
   - adapted: input/output should move toward Feishu note and doc flows
+
+Important:
+
+- use `docs/skills/` as the only formal operational skill layer
+- if XHIP style feels off, the original tone and logic files in `docs/xhip/` are the baseline
 
 ## Current Scope
 

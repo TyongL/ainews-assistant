@@ -158,10 +158,21 @@ description: 飞书原生 AI 资讯工作流助手。接收资讯、管理阅读
 
 - `config/default-config.json`
 - `config/feishu-schema.md`
+- `docs/skills/ainews.SKILL.md`
+- `docs/skills/ainews-companion.SKILL.md`
+- `docs/skills/ainews-archive.SKILL.md`
+- `docs/skills/XHIP-agent.SKILL.md`
+- `docs/xhip/tone_and_persona.md`
+- `docs/xhip/logic_and_style.md`
 - `prompts/`
 - `templates/`
 - `examples/`
 - `scripts/`
+
+在实际执行时：
+
+- 优先参考 `docs/skills/` 作为新项目正式规则
+- 对晓辉博士风格相关问题，以 `docs/xhip/` 下原始资源为准
 
 ## 安装
 
