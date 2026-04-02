@@ -1,0 +1,28 @@
+{
+  "assistant_name": "AI资讯助手",
+  "frontend": "OpenClaw",
+  "state_backend": "Feishu Bitable",
+  "content_backend": "Feishu Docs",
+  "local_backup_enabled": true,
+  "workflow_statuses": [
+    "ingested",
+    "queued",
+    "reading",
+    "discussing",
+    "noted",
+    "scripted",
+    "archived"
+  ],
+  "tables": {
+    "news_items": "资讯主表",
+    "reading_sessions": "阅读会话表",
+    "notes": "笔记表",
+    "scripts": "文案表"
+  },
+  "docs": {
+    "navigation": "AI资讯助手总导航",
+    "daily_report_prefix": "AI资讯日报_",
+    "note_prefix": "AI资讯笔记_",
+    "script_prefix": "AI资讯口播稿_"
+  }
+}

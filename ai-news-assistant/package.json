@@ -1,0 +1,12 @@
+{
+  "name": "ai-news-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenClaw-installable AI news workflow assistant scaffold",
+  "scripts": {
+    "help": "node -e \"console.log('Use python scripts/*.py --help for CLI entrypoints.')\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
